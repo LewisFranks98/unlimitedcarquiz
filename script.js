@@ -6,7 +6,7 @@ const questions = [
   },
   {
     question: "Identify this car:",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/1993_Toyota_Supra_MK_IV_Turbo_front-left_2009-03-08_A.jpg/640px-1993_Toyota_Supra_MK_IV_Turbo_front-left_2009-03-08_A.jpg",
+    image: "https://cdn.pixabay.com/photo/2018/01/20/15/36/car-3095475_960_720.jpg",
     answers: ["Mazda RX-7", "Nissan 350Z", "Toyota Supra", "Mitsubishi Eclipse"],
     correct: 2
   }
