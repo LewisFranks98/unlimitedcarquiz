@@ -6,7 +6,7 @@ const questions = [
   },
   {
     question: "Identify this car:",
-    image: "https://cdn.pixabay.com/photo/2018/01/20/15/36/car-3095475_960_720.jpg",
+    image: "https://cdn.pixabay.com/photo/2021/01/04/07/58/jdm-5886801_1280.jpg",
     answers: ["Mazda RX-7", "Nissan 350Z", "Toyota Supra", "Mitsubishi Eclipse"],
     correct: 2
   }
