@@ -12,6 +12,35 @@ const questions = [
   }
 ];
 
+// Shuffle function (Fisher-Yates)
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function shuffleAnswers(question) {
+  const originalCorrectIndex = question.correct;
+  const answerObjects = question.answers.map((answer, index) => ({
+    answer,
+    originalIndex: index
+  }));
+
+  // Shuffle answers
+  for (let i = answerObjects.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [answerObjects[i], answerObjects[j]] = [answerObjects[j], answerObjects[i]];
+  }
+
+  question.answers = answerObjects.map(obj => obj.answer);
+  question.correct = answerObjects.findIndex(obj => obj.originalIndex === originalCorrectIndex);
+}
+
+// Shuffle questions and their answers before starting
+shuffle(questions);
+questions.forEach(q => shuffleAnswers(q));
+
 let current = 0;
 let attempts = 0;
 const maxTries = 5;
@@ -73,9 +102,6 @@ document.getElementById("next").onclick = () => {
     loadQuestion();
   } else {
     alert("Quiz complete!");
-    // Optionally reset:
-    // current = 0;
-    // loadQuestion();
   }
 };
 
