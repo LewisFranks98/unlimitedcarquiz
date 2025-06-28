@@ -24,3 +24,10 @@ button {
   border-radius: 8px;
   cursor: pointer;
 }
+select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
